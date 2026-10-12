@@ -1,0 +1,89 @@
+==============================================================================
+AUTO CLICKER BENCHMARK REPORT
+==============================================================================
+Model       : 3.1 Pro High
+File        : 3.1 Pro High.py
+Date        : 2026-10-12 14:56
+Python      : 3.14.7 on win32
+Total score : 91.15 / 100   Grade S
+Coverage    : 94% of rubric measured
+
+FUNCTIONALITY  30.00 / 30
+------------------------------------------------------------------------------
+  Interval fields (h/m/s/ms)             5.0/5.0   4/4 units found
+  Random offset                          3.0/3.0   
+  Mouse button choice                    3.0/3.0   3/3 buttons
+  Click type single/double               3.0/3.0   
+  Repeat count / until stopped           4.0/4.0   
+  Cursor position (current/pick XY)      4.0/4.0   
+  Start / Stop controls                  2.0/2.0   
+  Hotkey support                         3.0/3.0   
+  Record & playback                      2.0/2.0   
+  GUI toolkit + click backend            1.0/1.0   gui=yes backend=yes
+
+ARCHITECTURE  20.00 / 25
+------------------------------------------------------------------------------
+  Class-based design                     4.0/4.0   3 classes
+  GUI / logic separation                 0.0/5.0   gui=['ClickEngine', 'RecordEngine', 'AutoClickerGUI'] logic=-
+  Non-blocking GUI                       4.0/4.0   threading
+  Thread / event-loop safety             2.0/2.0   
+  Main guard                             1.0/1.0   
+  Module-level constants                 2.0/2.0   7 constants
+  Type hints                             2.0/2.0   96% of functions
+  Error handling                         2.0/2.0   4 try blocks
+  Clean shutdown                         2.0/2.0   
+  No global statements                   1.0/1.0   
+
+EFFICIENCY & DENSITY  16.15 / 20
+------------------------------------------------------------------------------
+  Feature density                        4.2/5.0   10.0 feature pts per 100 SLOC (target 12)
+  Average cyclomatic complexity          4.0/4.0   2.86
+  Longest function                       1.0/3.0   83 lines
+  Nesting depth                          2.0/2.0   4
+  Duplicate code                         2.0/3.0   6.2% duplicate lines
+  Magic numbers                          2.0/2.0   4 (1.3 per 100 SLOC)
+  Import hygiene                         1.0/1.0   clean
+
+RUNTIME PERFORMANCE  25.00 / 25
+------------------------------------------------------------------------------
+  Precise timing clock                   3.0/3.0   perf_counter/monotonic
+  No busy-wait loops                     3.0/3.0   0 suspicious loops
+  Launch stability                       5.0/5.0   alive after 4s
+  Idle CPU                               5.0/5.0   0.0%
+  Memory footprint                       3.0/3.0   42.6 MB
+  CPS accuracy @ 100 ms                  skipped   skipped
+
+CODE METRICS
+------------------------------------------------------------------------------
+  Source lines of code     : 301
+  Comment lines            : 8
+  Docstring lines          : 3
+  Total lines              : 376
+  Functions / classes      : 28 / 3
+  Avg / max complexity     : 2.86 / 13
+  Longest function (lines) : 83
+  Max nesting depth        : 4
+  Duplicate line ratio     : 6.2%
+  Magic numbers            : 4
+  Avg line length          : 50.1
+  Parse + compile time     : 8.11 ms
+
+RUNTIME PROBE
+------------------------------------------------------------------------------
+  Alive after 4s          : True
+  Idle CPU                 : 0.0%
+  Memory (RSS)             : 42.6 MB
+  Threads                  : 4
+
+BIGGEST POINT LOSSES
+------------------------------------------------------------------------------
+  -5.0  Architecture: GUI / logic separation (gui=['ClickEngine', 'RecordEngine', 'AutoClickerGUI'] logic=-)
+  -2.0  Efficiency & Density: Longest function (83 lines)
+  -1.0  Efficiency & Density: Duplicate code (6.2% duplicate lines)
+  -0.8  Efficiency & Density: Feature density (10.0 feature pts per 100 SLOC (target 12))
+
+INSTALL REQUIREMENTS DETECTED
+------------------------------------------------------------------------------
+  pip install pynput
+
+==============================================================================

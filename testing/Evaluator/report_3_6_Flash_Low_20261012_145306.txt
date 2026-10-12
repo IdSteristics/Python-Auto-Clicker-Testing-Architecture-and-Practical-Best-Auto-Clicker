@@ -1,0 +1,34 @@
+==============================================================================
+AUTO CLICKER BENCHMARK REPORT
+==============================================================================
+Model       : 3.6 Flash Low
+File        : 3.6 Flash Low.py
+Date        : 2026-10-12 14:53
+Python      : 3.14.7 on win32
+Total score : 0.00 / 100   Grade F
+Coverage    : 100% of rubric measured
+
+FUNCTIONALITY  0.00 / 30
+------------------------------------------------------------------------------
+  Script compiles                       0.0/30.0   line 142: Function parameters cannot be parenthesized
+
+ARCHITECTURE  0.00 / 25
+------------------------------------------------------------------------------
+  Script compiles                       0.0/25.0   line 142: Function parameters cannot be parenthesized
+
+EFFICIENCY & DENSITY  0.00 / 20
+------------------------------------------------------------------------------
+  Script compiles                       0.0/20.0   line 142: Function parameters cannot be parenthesized
+
+RUNTIME PERFORMANCE  0.00 / 25
+------------------------------------------------------------------------------
+  Script compiles                       0.0/25.0   line 142: Function parameters cannot be parenthesized
+
+BIGGEST POINT LOSSES
+------------------------------------------------------------------------------
+  -30.0  Functionality: Script compiles (line 142: Function parameters cannot be parenthesized)
+  -25.0  Architecture: Script compiles (line 142: Function parameters cannot be parenthesized)
+  -25.0  Runtime Performance: Script compiles (line 142: Function parameters cannot be parenthesized)
+  -20.0  Efficiency & Density: Script compiles (line 142: Function parameters cannot be parenthesized)
+
+==============================================================================

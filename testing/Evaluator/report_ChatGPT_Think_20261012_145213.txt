@@ -1,0 +1,90 @@
+==============================================================================
+AUTO CLICKER BENCHMARK REPORT
+==============================================================================
+Model       : ChatGPT Think
+File        : ChatGPT Think.py
+Date        : 2026-10-12 14:52
+Python      : 3.14.7 on win32
+Total score : 79.88 / 100   Grade B
+Coverage    : 94% of rubric measured
+
+FUNCTIONALITY  30.00 / 30
+------------------------------------------------------------------------------
+  Interval fields (h/m/s/ms)             5.0/5.0   4/4 units found
+  Random offset                          3.0/3.0   
+  Mouse button choice                    3.0/3.0   3/3 buttons
+  Click type single/double               3.0/3.0   
+  Repeat count / until stopped           4.0/4.0   
+  Cursor position (current/pick XY)      4.0/4.0   
+  Start / Stop controls                  2.0/2.0   
+  Hotkey support                         3.0/3.0   
+  Record & playback                      2.0/2.0   
+  GUI toolkit + click backend            1.0/1.0   gui=yes backend=yes
+
+ARCHITECTURE  25.00 / 25
+------------------------------------------------------------------------------
+  Class-based design                     4.0/4.0   4 classes
+  GUI / logic separation                 5.0/5.0   gui=['AutoClickerApp'] logic=['ClickEngine']
+  Non-blocking GUI                       4.0/4.0   threading
+  Thread / event-loop safety             2.0/2.0   
+  Main guard                             1.0/1.0   
+  Module-level constants                 2.0/2.0   8 constants
+  Type hints                             2.0/2.0   100% of functions
+  Error handling                         2.0/2.0   10 try blocks
+  Clean shutdown                         2.0/2.0   
+  No global statements                   1.0/1.0   
+
+EFFICIENCY & DENSITY  10.40 / 20
+------------------------------------------------------------------------------
+  Feature density                        1.4/5.0   3.4 feature pts per 100 SLOC (target 12)
+  Average cyclomatic complexity          3.0/4.0   3.58
+  Longest function                       0.0/3.0   289 lines
+  Nesting depth                          2.0/2.0   3
+  Duplicate code                         1.0/3.0   11.0% duplicate lines
+  Magic numbers                          2.0/2.0   8 (0.9 per 100 SLOC)
+  Import hygiene                         1.0/1.0   clean
+
+RUNTIME PERFORMANCE  14.47 / 25
+------------------------------------------------------------------------------
+  Precise timing clock                   3.0/3.0   perf_counter/monotonic
+  No busy-wait loops                     0.0/3.0   2 suspicious loops
+  Launch stability                       5.0/5.0   alive after 4s
+  Idle CPU                               0.0/5.0   9.4%
+  Memory footprint                       3.0/3.0   55.3 MB
+  CPS accuracy @ 100 ms                  skipped   skipped
+
+CODE METRICS
+------------------------------------------------------------------------------
+  Source lines of code     : 890
+  Comment lines            : 24
+  Docstring lines          : 2
+  Total lines              : 1132
+  Functions / classes      : 38 / 4
+  Avg / max complexity     : 3.58 / 10
+  Longest function (lines) : 289
+  Max nesting depth        : 3
+  Duplicate line ratio     : 11.0%
+  Magic numbers            : 8
+  Avg line length          : 33.1
+  Parse + compile time     : 8.69 ms
+
+RUNTIME PROBE
+------------------------------------------------------------------------------
+  Alive after 4s          : True
+  Idle CPU                 : 9.4%
+  Memory (RSS)             : 55.3 MB
+  Threads                  : 8
+
+BIGGEST POINT LOSSES
+------------------------------------------------------------------------------
+  -5.0  Runtime Performance: Idle CPU (9.4%)
+  -3.6  Efficiency & Density: Feature density (3.4 feature pts per 100 SLOC (target 12))
+  -3.0  Efficiency & Density: Longest function (289 lines)
+  -3.0  Runtime Performance: No busy-wait loops (2 suspicious loops)
+  -2.0  Efficiency & Density: Duplicate code (11.0% duplicate lines)
+
+INSTALL REQUIREMENTS DETECTED
+------------------------------------------------------------------------------
+  pip install pyautogui pynput
+
+==============================================================================

@@ -1,0 +1,35 @@
+TASK: Build a fully functional auto clicker with a GUI in ONE Python file.
+
+ENVIRONMENT
+- The file will be opened and run in Python IDLE (press F5). No command-line arguments, no extra files, no config files, no external assets.
+- Assume Windows 10/11 and Python 3.10 or newer.
+- You may use any imports you know (standard library or third-party). Prefer the fewest dependencies that still give a reliable result.
+- The whole program must live in a single .py file that I can copy, paste, save, and run.
+
+REQUIRED FEATURES (modelled on a classic auto clicker window)
+1. Click interval: separate inputs for hours, minutes, seconds, and milliseconds.
+2. Random offset: a checkbox plus a milliseconds input that randomly varies each interval.
+3. Click options: mouse button (Left / Right / Middle) and click type (Single / Double).
+4. Click repeat: either "Repeat N times" (with a number input) or "Repeat until stopped".
+5. Cursor position: either "Current location" or "Pick location" with X and Y inputs and a button to capture the position.
+6. Start and Stop buttons, with the Stop button disabled while idle and the Start button disabled while running.
+7. Hotkey setting: a global start/stop hotkey (default F6) that the user can change from the GUI and that works even when the window is not focused.
+8. Record & Playback: record a sequence of mouse clicks (position, button, delay) and replay it, with a loop option.
+9. A status line showing the current state and the number of clicks performed.
+
+ENGINEERING REQUIREMENTS (these are scored)
+- Architecture: separate the click engine / logic from the GUI. Use classes with clear single responsibilities. Define tunable values as module-level constants at the top. Include type hints, an `if __name__ == "__main__":` guard, no `global` statements, and no wildcard imports.
+- Responsiveness: the GUI must never freeze. Run clicking in a background thread (or use a non-blocking scheduler) and stop it safely with a threading.Event or equivalent.
+- Timing accuracy: use time.perf_counter() (or time.monotonic()) with drift compensation so the real click rate matches the set interval. No busy-wait loops that burn CPU; the app must sit near 0% CPU while idle.
+- Reliability: validate every input (reject empty, negative, or non-numeric values and a total interval of 0) and show a clear message instead of crashing. Handle exceptions without bare `except:`. Shut down cleanly when the window is closed (stop threads, release hotkeys).
+- Safety: nothing may click on launch. Stopping must always work, including through the hotkey.
+- Code efficiency and density: write compact, readable code. No dead code, no duplicated logic, no unused imports, no magic numbers, no unnecessary comments. Keep functions short and low in complexity. Every feature above must be present without padding the file.
+
+OUTPUT FORMAT (follow exactly)
+1. One single Python code block containing the complete program. Nothing else inside the block.
+2. After the code block, a section titled "MODULES TO INSTALL" that lists:
+   - every third-party module the script imports, with the exact pip command, for example: pip install pyautogui pynput
+   - a note on whether tkinter is needed and whether it ships with Python on Windows
+   - "None" if the script uses only the standard library
+3. One line stating the Python version and OS you assumed.
+Do not split the program into multiple files, do not ask me questions first, and do not add long explanations.

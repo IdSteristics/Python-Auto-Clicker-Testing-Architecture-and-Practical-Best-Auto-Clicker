@@ -1,0 +1,90 @@
+==============================================================================
+AUTO CLICKER BENCHMARK REPORT
+==============================================================================
+Model       : Sonnet 5.5 Medium
+File        : Sonnet 5.5 Medium.py
+Date        : 2026-10-12 14:48
+Python      : 3.14.7 on win32
+Total score : 91.13 / 100   Grade S
+Coverage    : 94% of rubric measured
+
+FUNCTIONALITY  30.00 / 30
+------------------------------------------------------------------------------
+  Interval fields (h/m/s/ms)             5.0/5.0   4/4 units found
+  Random offset                          3.0/3.0   
+  Mouse button choice                    3.0/3.0   3/3 buttons
+  Click type single/double               3.0/3.0   
+  Repeat count / until stopped           4.0/4.0   
+  Cursor position (current/pick XY)      4.0/4.0   
+  Start / Stop controls                  2.0/2.0   
+  Hotkey support                         3.0/3.0   
+  Record & playback                      2.0/2.0   
+  GUI toolkit + click backend            1.0/1.0   gui=yes backend=yes
+
+ARCHITECTURE  25.00 / 25
+------------------------------------------------------------------------------
+  Class-based design                     4.0/4.0   8 classes
+  GUI / logic separation                 5.0/5.0   gui=['ClickSettings', 'Step', 'ClickEngine', 'Recorder', 'AutoClickerApp'] logic=['HotkeyManager']
+  Non-blocking GUI                       4.0/4.0   threading
+  Thread / event-loop safety             2.0/2.0   
+  Main guard                             1.0/1.0   
+  Module-level constants                 2.0/2.0   24 constants
+  Type hints                             2.0/2.0   100% of functions
+  Error handling                         2.0/2.0   4 try blocks
+  Clean shutdown                         2.0/2.0   
+  No global statements                   1.0/1.0   
+
+EFFICIENCY & DENSITY  16.40 / 20
+------------------------------------------------------------------------------
+  Feature density                        3.4/5.0   8.2 feature pts per 100 SLOC (target 12)
+  Average cyclomatic complexity          4.0/4.0   1.92
+  Longest function                       2.0/3.0   46 lines
+  Nesting depth                          2.0/2.0   3
+  Duplicate code                         2.0/3.0   3.5% duplicate lines
+  Magic numbers                          2.0/2.0   0 (0.0 per 100 SLOC)
+  Import hygiene                         1.0/1.0   clean
+
+RUNTIME PERFORMANCE  19.74 / 25
+------------------------------------------------------------------------------
+  Precise timing clock                   3.0/3.0   perf_counter/monotonic
+  No busy-wait loops                     0.0/3.0   2 suspicious loops
+  Launch stability                       5.0/5.0   alive after 4s
+  Idle CPU                               4.0/5.0   1.6%
+  Memory footprint                       3.0/3.0   42.2 MB
+  CPS accuracy @ 100 ms                  skipped   skipped
+
+CODE METRICS
+------------------------------------------------------------------------------
+  Source lines of code     : 368
+  Comment lines            : 0
+  Docstring lines          : 0
+  Total lines              : 448
+  Functions / classes      : 52 / 8
+  Avg / max complexity     : 1.92 / 5
+  Longest function (lines) : 46
+  Max nesting depth        : 3
+  Duplicate line ratio     : 3.5%
+  Magic numbers            : 0
+  Avg line length          : 42.6
+  Parse + compile time     : 8.59 ms
+
+RUNTIME PROBE
+------------------------------------------------------------------------------
+  Alive after 4s          : True
+  Idle CPU                 : 1.6%
+  Memory (RSS)             : 42.2 MB
+  Threads                  : 4
+
+BIGGEST POINT LOSSES
+------------------------------------------------------------------------------
+  -3.0  Runtime Performance: No busy-wait loops (2 suspicious loops)
+  -1.6  Efficiency & Density: Feature density (8.2 feature pts per 100 SLOC (target 12))
+  -1.0  Efficiency & Density: Longest function (46 lines)
+  -1.0  Efficiency & Density: Duplicate code (3.5% duplicate lines)
+  -1.0  Runtime Performance: Idle CPU (1.6%)
+
+INSTALL REQUIREMENTS DETECTED
+------------------------------------------------------------------------------
+  pip install pynput
+
+==============================================================================
